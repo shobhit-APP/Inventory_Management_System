@@ -1,0 +1,6 @@
+/mvnw text eol=lf
+*.cmd text eol=crlf
+*.java linguist-detectable
+*.html linguist-vendored
+*.css linguist-vendored
+
