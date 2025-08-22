@@ -2,6 +2,7 @@ package com.example.StockStick.Controller;
 
 import com.example.StockStick.AllException.CustomException;
 import com.example.StockStick.Model.Contact;
+
 import com.example.StockStick.Service.ContactService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,8 +25,9 @@ public class ContactUsController {
     @PostMapping("/ContactUs")
     public String ContactUs( @ModelAttribute  Contact contact , Model model)
     {
+        System.out.println("bew " + contact.getEmail());
         try {
-            contactService.saveAndSendEmail(contact);
+            contactService.sendEmail(contact);
         }
         catch (CustomException e)
         {
